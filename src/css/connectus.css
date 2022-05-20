@@ -1,30 +1,30 @@
-.footer {
+.connect {
 	position: relative;
-	margin: 0 auto;
 	text-align: center;
 	font-size: 1rem;
 	font-weight: 400;
 	padding: 1.5rem 0;
 }
 
-.footer_text {
+.connect_text {
 	color: #979797;
 }
 
-.footer_list {
+.connect_list {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
 	padding: 0 1rem;
 	padding-top: 1rem;
 	margin: 0 auto;
 }
 
-.footer_list_item{
-    margin: 10px;
+.connect_list_item{
+    margin-top: 20px;
+	margin-right: 20px;
 }
 
-.footer_list_item:hover {
+.connect_list_item:hover {
 	color: #8b939b;
 }

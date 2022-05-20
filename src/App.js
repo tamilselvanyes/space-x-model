@@ -1,51 +1,21 @@
 import "./App.css";
 import "./css/reset.css";
-import "./css/footer.css";
+import "./css/connectus.css";
+import "./css/recent_launch.css";
+import "./css/upcoming.css";
+import "./css/navigation.css";
+import { ConnectOptions } from "./ConnectOptions";
+import { RecentLaunch } from "./RecentLaunch";
+import { UpcomingLaunches } from "./UpcomingLaunches";
+import { NavigationBar } from "./NavigationBar";
 
 export default function App() {
   return (
     <div className="App">
-      <p>SpaceX</p>
-      <FooterOptions />
+      <NavigationBar />
+      <RecentLaunch />
+      <UpcomingLaunches />
+      <ConnectOptions />
     </div>
-  );
-}
-
-function FooterOptions() {
-  return (
-    <footer className="footer">
-      <ul className="footer_list">
-        <li>
-          <a class="footer_list_item" href="#">
-            SpaceX © 2022
-          </a>
-        </li>
-        <li>
-          <a class="footer_list_item" href="#">
-            Twitter
-          </a>
-        </li>
-        <li>
-          <a class="footer_list_item" href="#">
-            Youtube
-          </a>
-        </li>
-        <li>
-          <a class="footer_list_item" href="#">
-            Instagram
-          </a>
-        </li>
-        <li>
-          <a class="footer_list_item" href="#">
-            Linkedin
-          </a>
-        </li>
-        <li>
-          <a class="footer_list_item" href="#">
-            Privacy Policy
-          </a>
-        </li>
-      </ul>
-    </footer>
   );
 }

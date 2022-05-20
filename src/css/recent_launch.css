@@ -1,0 +1,65 @@
+.recent_launch{
+    height: 100vh;
+    position: relative;
+
+}
+
+.recent_launch .bg{
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.recent_launch .bg:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.recent_launch .launch_content {
+	position: absolute;
+	bottom: 10%;
+	left: 1.5rem;
+	width: 90%;
+	max-width: 500px;
+}
+
+.recent_launch .launch_content_header {
+    font-size: 2rem;
+    text-align: left;
+    margin: 0,0, 10px, auto;
+    font-weight: bold;
+
+}
+
+.recent_launch .launch_content_subheader {
+    font-size: 1rem;
+}
+
+.recent_launch .launch_content .content_button {
+	border: 2px solid white;
+	display: inline-block;
+	margin-top: 1rem;
+    background: transparent
+}
+
+.recent_launch .launch_content .content_button .text {
+	font-weight: bold;
+	font-size: 0.8rem;
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 1.2rem 2.5rem;
+    color: red;
+}
+
+.recent_launch .launch_content .content_button:hover{
+    background-color: white;
+    transform-origin: top center;
+}
+
+
