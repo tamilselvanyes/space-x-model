@@ -62,6 +62,7 @@ export function UpcomingLaunches() {
               <div className="rocketimg_div">
                 <img
                   className="rocketimg"
+                  alt="rocketimage"
                   src={rocketDetails.flickr_images[0]}
                 />
                 <div>
