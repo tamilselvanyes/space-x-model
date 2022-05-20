@@ -5,79 +5,72 @@ import "./css/recent_launch.css";
 import "./css/upcoming.css";
 import "./css/navigation.css";
 import "./css/mission.css";
+import "./css/history.css";
 import { ConnectOptions } from "./ConnectOptions";
 import { RecentLaunch } from "./RecentLaunch";
 import { UpcomingLaunches } from "./UpcomingLaunches";
 import { NavigationBar } from "./NavigationBar";
+import { OurMission } from "./OurMission";
+import { Switch, Route, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { API } from "./global";
 
 export default function App() {
   return (
     <div className="App">
       <NavigationBar />
-      <RecentLaunch />
-      <UpcomingLaunches />
-      <OurMission />
-      <ConnectOptions />
+
+      <Switch>
+        <Route path="/history">
+          <HistoryPage />
+        </Route>
+        <Route path="/launches">
+          <div>History</div>
+        </Route>
+        <Route path="/rockets">
+          <div>History</div>
+        </Route>
+        <Route path="/about">
+          <div>History</div>
+        </Route>
+        <Route exact path="/">
+          <RecentLaunch />
+          <UpcomingLaunches />
+          <OurMission />
+          <ConnectOptions />
+        </Route>
+      </Switch>
     </div>
   );
 }
 
-function OurMission() {
-  const [mission, setMission] = useState(null);
-  function getMission() {
-    fetch(`${API}/missions`, {
+function HistoryPage() {
+  const [historyDetails, setHistoryDetails] = useState(null);
+
+  function getHistoryDetails() {
+    fetch(`${API}/history`, {
       method: "GET",
     })
       .then((data) => data.json())
-      .then((final_data) => {
-        setMission(final_data);
-      });
+      .then((final_data) => setHistoryDetails(final_data));
   }
 
   useEffect(() => {
-    getMission();
+    getHistoryDetails();
   }, []);
 
+  function ShowHistoryItem({ historyitem }) {
+    return <div className="history-item-div">Showing Items</div>;
+  }
   return (
-    <section className="mission-section">
-      <h2 className="mission-title">OUR MISSION</h2>
-      <div className="mission-main-div">
-        {mission !== null ? (
-          mission.map((item, index) => (
-            <ShowMission key={item.mission_id} mission={item} />
-          ))
-        ) : (
-          <div>Currently all missions are completed</div>
-        )}
+    <section className="history-section">
+      <div className="main-history-div">
+        {historyDetails != null
+          ? historyDetails.map((historyitem) => (
+              <ShowHistoryItem historyitem={historyitem} />
+            ))
+          : ""}
       </div>
     </section>
-  );
-}
-
-function ShowMission({ mission }) {
-  return (
-    <div>
-      {mission !== null ? (
-        <div className="mission-div">
-          <h2>{mission.mission_name}</h2>
-          <p>Manufacturer: {mission.manufacturers[0]}</p>
-          <p>Follow our Mission</p>
-          <div className="links-div">
-            <a href={mission.twitter}>
-              <FontAwesomeIcon icon="fa-brands fa-twitter" />
-            </a>
-            <div>
-              <FontAwesomeIcon icon="check-square" />
-              Your <FontAwesomeIcon icon="coffee" /> is hot and ready!
-            </div>
-          </div>
-        </div>
-      ) : (
-        ""
-      )}
-    </div>
   );
 }

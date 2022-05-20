@@ -1,6 +1,8 @@
 import logo from "./bgimages/spacex-logo.png";
+import { useHistory } from "react-router-dom";
 
 export function NavigationBar() {
+  const history = useHistory();
   return (
     <section>
       <header className="header">
@@ -8,7 +10,7 @@ export function NavigationBar() {
 
         <div className="header_logo_nav">
           <div className="header_logo">
-            <button>
+            <button onClick={() => history.push("/")}>
               <img src={logo} alt="SpaceX" />
             </button>
           </div>
@@ -16,16 +18,36 @@ export function NavigationBar() {
           <nav className="header_navigation">
             <ul>
               <li>
-                <button className="nav_link_button">History</button>
+                <button
+                  className="nav_link_button"
+                  onClick={() => history.push("/history")}
+                >
+                  History
+                </button>
               </li>
               <li>
-                <button className="nav_link_button">Launches</button>
+                <button
+                  className="nav_link_button"
+                  onClick={() => history.push("/launches")}
+                >
+                  Launches
+                </button>
               </li>
               <li>
-                <button className="nav_link_button">Rockets</button>
+                <button
+                  className="nav_link_button"
+                  onClick={() => history.push("/rockets")}
+                >
+                  Rockets
+                </button>
               </li>
               <li>
-                <button className="nav_link_button">About</button>
+                <button
+                  className="nav_link_button"
+                  onClick={() => history.push("/about")}
+                >
+                  About
+                </button>
               </li>
             </ul>
           </nav>

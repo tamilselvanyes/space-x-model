@@ -62,4 +62,9 @@
     transform-origin: top center;
 }
 
+.recent_launch .launch_content .content_button .text:hover{
+	color:black;
+
+}
+
 

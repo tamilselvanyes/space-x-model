@@ -19,23 +19,13 @@
     margin-bottom: 5px;
 }
 
-.read-button {
-	border: 2px solid white;
-	display: inline-block;
-	margin-top: 1rem;
-    background: transparent
-}
 
-.read-button .text {
-	font-weight: bold;
-	font-size: 0.8rem;
-	display: inline-block;
-	text-transform: uppercase;
-	padding: 0.5rem 1rem;
-    color: green;
+ .anchor-links{
+        text-decoration: underline;
+        border: 10px;
+        padding: 5px;
 }
-
-.read-button:hover{
-    background-color: white;
-    transform-origin: top center;
+ .anchor-text:hover{
+    color:blue;
+     
 }

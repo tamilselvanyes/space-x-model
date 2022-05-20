@@ -1,0 +1,9 @@
+.history-section{
+    position: relative;
+}
+
+.main-history-div{
+    position: absolute;
+    left: 1.5rem;
+    top: 8rem;
+}
