@@ -34,23 +34,26 @@ export function RecentLaunch() {
       .then((data) => data.json())
       .then((final_data) => setLatestLaunch(final_data));
   }
-
+  if (latestLaunch !== null && latestLaunch !== undefined) {
+    var date = new Date(latestLaunch.launch_date_unix * 1000);
+    console.log(date);
+  }
   return (
-    <section class="recent_launch">
+    <section className="recent_launch">
       <div
         style={{ backgroundImage: `url(${bgimage})` }}
-        class="recent_launch bg"
+        className="recent_launch bg"
       ></div>
       {latestLaunch != null ? (
-        <div class="launch_content">
-          <h1 class="launch_content_subheader">NEXT LAUNCH</h1>
+        <div className="launch_content">
+          <h1 className="launch_content_subheader">NEXT LAUNCH</h1>
 
-          <h1 class="launch_content_header">{latestLaunch.mission_name}</h1>
-          <p>Launch Date: {Date(latestLaunch.launch_date_unix)}</p>
+          <h1 className="launch_content_header">{latestLaunch.mission_name}</h1>
+          <p>Launch Date:{date}</p>
 
-          <button class="content_button">
-            <span class="text">READ MORE</span>
-            <div class="hover"></div>
+          <button className="content_button">
+            <span className="text">READ MORE</span>
+            <div className="hover"></div>
           </button>
         </div>
       ) : (

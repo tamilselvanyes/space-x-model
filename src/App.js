@@ -60,8 +60,16 @@ function HistoryPage() {
   }, []);
 
   function ShowHistoryItem({ historyitem }) {
-    return <div className="history-item-div">Showing Items</div>;
+    let event_date = new Date(historyitem.event_date_unix * 1000);
+    console.log(event_date);
+    return (
+      <div className="history-item-div">
+        <h1>{historyitem.title}</h1>
+        <h5>Event Date </h5>
+      </div>
+    );
   }
+
   return (
     <section className="history-section">
       <div className="main-history-div">
