@@ -1,11 +1,6 @@
 import "./App.css";
 import "./css/reset.css";
-import "./css/connectus.css";
-import "./css/recent_launch.css";
-import "./css/upcoming.css";
 import "./css/navigation.css";
-import "./css/mission.css";
-import "./css/history.css";
 import { ConnectOptions } from "./ConnectOptions";
 import { RecentLaunch } from "./RecentLaunch";
 import { UpcomingLaunches } from "./UpcomingLaunches";

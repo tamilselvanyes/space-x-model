@@ -5,6 +5,7 @@ import bg3 from "./bgimages/spacex-4.webp";
 import bg4 from "./bgimages/spacex-5.webp";
 import { useEffect, useState } from "react";
 import { API } from "./global";
+import "./css/recent_launch.css";
 
 export function RecentLaunch() {
   const [latestLaunch, setLatestLaunch] = useState(null);

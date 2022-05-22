@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { API } from "./global";
+import "./css/mission.css";
 
 export function OurMission() {
   const [mission, setMission] = useState(null);

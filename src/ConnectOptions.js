@@ -1,3 +1,5 @@
+import "./css/connectus.css";
+
 export function ConnectOptions() {
   return (
     <section className="connect">
