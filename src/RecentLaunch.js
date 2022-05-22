@@ -35,8 +35,7 @@ export function RecentLaunch() {
       .then((final_data) => setLatestLaunch(final_data));
   }
   if (latestLaunch !== null && latestLaunch !== undefined) {
-    var date = new Date(latestLaunch.launch_date_unix * 1000);
-    console.log(date);
+    var date = new Date(latestLaunch.launch_date_unix * 1000).toString();
   }
   return (
     <section className="recent_launch">
@@ -49,7 +48,7 @@ export function RecentLaunch() {
           <h1 className="launch_content_subheader">NEXT LAUNCH</h1>
 
           <h1 className="launch_content_header">{latestLaunch.mission_name}</h1>
-          <p>Launch Date:{date}</p>
+          <p>Launch Date: {date}</p>
 
           <button className="content_button">
             <span className="text">READ MORE</span>

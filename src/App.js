@@ -12,8 +12,8 @@ import { UpcomingLaunches } from "./UpcomingLaunches";
 import { NavigationBar } from "./NavigationBar";
 import { OurMission } from "./OurMission";
 import { Switch, Route, useHistory } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { API } from "./global";
+import { HistoryPage } from "./HistoryPage";
+import { LaunchesPage } from "./LaunchesPage";
 
 export default function App() {
   return (
@@ -25,7 +25,7 @@ export default function App() {
           <HistoryPage />
         </Route>
         <Route path="/launches">
-          <div>History</div>
+          <LaunchesPage />
         </Route>
         <Route path="/rockets">
           <div>History</div>
@@ -41,44 +41,5 @@ export default function App() {
         </Route>
       </Switch>
     </div>
-  );
-}
-
-function HistoryPage() {
-  const [historyDetails, setHistoryDetails] = useState(null);
-
-  function getHistoryDetails() {
-    fetch(`${API}/history`, {
-      method: "GET",
-    })
-      .then((data) => data.json())
-      .then((final_data) => setHistoryDetails(final_data));
-  }
-
-  useEffect(() => {
-    getHistoryDetails();
-  }, []);
-
-  function ShowHistoryItem({ historyitem }) {
-    let event_date = new Date(historyitem.event_date_unix * 1000);
-    console.log(event_date);
-    return (
-      <div className="history-item-div">
-        <h1>{historyitem.title}</h1>
-        <h5>Event Date </h5>
-      </div>
-    );
-  }
-
-  return (
-    <section className="history-section">
-      <div className="main-history-div">
-        {historyDetails != null
-          ? historyDetails.map((historyitem) => (
-              <ShowHistoryItem historyitem={historyitem} />
-            ))
-          : ""}
-      </div>
-    </section>
   );
 }
