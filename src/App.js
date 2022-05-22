@@ -14,6 +14,8 @@ import { OurMission } from "./OurMission";
 import { Switch, Route, useHistory } from "react-router-dom";
 import { HistoryPage } from "./HistoryPage";
 import { LaunchesPage } from "./LaunchesPage";
+import { LaunchDescription } from "./LaunchDescription";
+import { RocketPage } from "./RocketPage";
 
 export default function App() {
   return (
@@ -24,11 +26,14 @@ export default function App() {
         <Route path="/history">
           <HistoryPage />
         </Route>
+        <Route path="/launches/:flight_number">
+          <LaunchDescription />
+        </Route>
         <Route path="/launches">
           <LaunchesPage />
         </Route>
         <Route path="/rockets">
-          <div>History</div>
+          <RocketPage />
         </Route>
         <Route path="/about">
           <div>History</div>
