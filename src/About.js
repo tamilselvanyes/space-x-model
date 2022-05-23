@@ -26,7 +26,6 @@ export function About() {
         style={{ backgroundImage: `url(${bg})` }}
         className="about-section bg"
       ></div>
-      {console.log(aboutDetails)}
       {aboutDetails != null ? (
         <div className="about_content">
           <p className="details">{aboutDetails.summary}</p>

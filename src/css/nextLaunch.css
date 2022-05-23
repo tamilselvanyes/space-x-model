@@ -1,0 +1,24 @@
+.nextlaunch-section{
+    position: relative;
+    align-items: center;
+}
+
+.nextlaunch-main-div{
+    margin-top: 8rem;
+    margin-left: 2rem;
+    
+}
+
+.main-title{
+    margin-bottom: 2rem;
+}
+
+.rocket-details-main-div{
+    margin-top: 1rem;
+
+}
+
+.rocket-details-main-div p {
+    margin-top:10px;
+
+}

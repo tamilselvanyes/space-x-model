@@ -12,7 +12,6 @@ export function UpcomingLaunches() {
       .then((data) => data.json())
       .then((final_data) => {
         setEvent(final_data);
-        console.log(final_data);
       });
   }
 
@@ -59,7 +58,6 @@ export function UpcomingLaunches() {
             <div className="upcoming-rocket-images">
               <h2>{item.mission_name}</h2>
               <p>Launch Data: {Date(item.launch_date_unix)}</p>
-              {console.log(rocketDetails)}
               <div className="rocketimg_div">
                 <img
                   className="rocketimg"

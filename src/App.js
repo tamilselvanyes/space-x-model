@@ -12,6 +12,7 @@ import { LaunchesPage } from "./LaunchesPage";
 import { LaunchDescription } from "./LaunchDescription";
 import { RocketPage } from "./RocketPage";
 import { About } from "./About";
+import { NextLaunch } from "./NextLaunch";
 
 export default function App() {
   return (
@@ -30,6 +31,9 @@ export default function App() {
         </Route>
         <Route path="/rockets">
           <RocketPage />
+        </Route>
+        <Route path="/nextLaunch">
+          <NextLaunch />
         </Route>
         <Route path="/about">
           <About />

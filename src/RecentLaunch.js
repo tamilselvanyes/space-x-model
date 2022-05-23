@@ -6,9 +6,12 @@ import bg4 from "./bgimages/spacex-5.webp";
 import { useEffect, useState } from "react";
 import { API } from "./global";
 import "./css/recent_launch.css";
+import { useHistory } from "react-router-dom";
 
 export function RecentLaunch() {
   const [latestLaunch, setLatestLaunch] = useState(null);
+  const history = useHistory();
+
   const [bgimage, setBgimage] = useState(bg2);
   function changeBackground() {
     const bgimages = [bg0, bg1, bg2, bg3, bg4];
@@ -28,7 +31,6 @@ export function RecentLaunch() {
   }, []);
 
   function getLatestLaunch() {
-    console.log("Inside get");
     fetch(`${API}/launches/next`, {
       method: "GET",
     })
@@ -51,7 +53,10 @@ export function RecentLaunch() {
           <h1 className="launch_content_header">{latestLaunch.mission_name}</h1>
           <p>Launch Date: {date}</p>
 
-          <button className="content_button">
+          <button
+            className="content_button"
+            onClick={() => history.push("/nextLaunch")}
+          >
             <span className="text">READ MORE</span>
             <div className="hover"></div>
           </button>

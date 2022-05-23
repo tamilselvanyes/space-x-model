@@ -15,7 +15,6 @@ export function LaunchDescription() {
       .then((data) => data.json())
       .then((final_data) => {
         setRocketDetails(final_data);
-        console.log(final_data);
       });
   }
 
