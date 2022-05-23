@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { API } from "./global";
 import "./css/launch.css";
 import { useHistory } from "react-router-dom";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 
 export function LaunchesPage() {
   const [launchDetails, setLaunchDetails] = useState(null);
@@ -57,13 +59,19 @@ export function LaunchesPage() {
 
   return (
     <section className="launch-section">
-      <div className="main-launch-div">
-        {launchDetails != null
-          ? launchDetails.map((launchitem, index) => (
-              <ShowHistoryItem key={index} launchitem={launchitem} />
-            ))
-          : ""}
-      </div>
+      {launchDetails != null ? (
+        <div className="main-launch-div">
+          {launchDetails.map((launchitem, index) => (
+            <ShowHistoryItem key={index} launchitem={launchitem} />
+          ))}
+        </div>
+      ) : (
+        <div className="loading">
+          <Box>
+            <CircularProgress size={60} color={"secondary"} />
+          </Box>
+        </div>
+      )}
     </section>
   );
 }

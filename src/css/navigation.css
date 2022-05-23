@@ -142,15 +142,21 @@
 /* md = 900 */
 /* lg = 1200 */
 
+
 @media screen and (min-width: 300px) {
+	.rocketimg{
+		width:400px;
+	}
 
-.upcoming-section{
-	height: 200vh;
-}
-.rocketimg{
-	width:400px;
+	.upcoming-section{
+		height: 170vh;
+	}
 }
 
+@media screen and (min-width: 1310px) {
+	.upcoming-section{
+		height: 100vh;
+	}
 }
 
 @media screen and (min-width: 600px) {
@@ -209,11 +215,6 @@
 		display: flex;
 	}
 
-	.upcoming-section{
-		height: 100vh;
-	}
-	
-
 	.recent_launch .launch_content {
 		left: 6rem;
 	}
@@ -246,4 +247,5 @@
 	}
 
 }
+
 

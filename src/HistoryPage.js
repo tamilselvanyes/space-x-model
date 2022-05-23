@@ -41,8 +41,8 @@ export function HistoryPage() {
     <section className="history-section">
       <div className="main-history-div">
         {historyDetails != null
-          ? historyDetails.map((historyitem) => (
-              <ShowHistoryItem historyitem={historyitem} />
+          ? historyDetails.map((historyitem, index) => (
+              <ShowHistoryItem key={index} historyitem={historyitem} />
             ))
           : ""}
       </div>
