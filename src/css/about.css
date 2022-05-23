@@ -1,0 +1,41 @@
+.about-section{
+    height: 100vh;
+    position: relative;
+
+}
+
+.about-section .bg{
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.about-section .bg:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+.about-section .about_content {
+	position: absolute;
+	top: 25%;
+	left: 4rem;
+	width: 90%;
+	max-width: 400px;
+}
+
+.about-section .about_content .details{
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.about-section .about_content .employee{
+    margin-top: 10px;
+    font-size: 1rem;
+}

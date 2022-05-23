@@ -11,6 +11,7 @@ import { HistoryPage } from "./HistoryPage";
 import { LaunchesPage } from "./LaunchesPage";
 import { LaunchDescription } from "./LaunchDescription";
 import { RocketPage } from "./RocketPage";
+import { About } from "./About";
 
 export default function App() {
   return (
@@ -31,7 +32,7 @@ export default function App() {
           <RocketPage />
         </Route>
         <Route path="/about">
-          <div>History</div>
+          <About />
         </Route>
         <Route exact path="/">
           <RecentLaunch />
