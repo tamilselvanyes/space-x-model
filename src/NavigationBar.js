@@ -1,5 +1,7 @@
 import logo from "./bgimages/spacex-logo.png";
 import { useHistory } from "react-router-dom";
+import { HamburgerMenu } from "./Hamburger_Slider";
+import "./css/hamburger.css";
 
 export function NavigationBar() {
   const history = useHistory();
@@ -51,6 +53,7 @@ export function NavigationBar() {
               </li>
             </ul>
           </nav>
+          <HamburgerMenu />
         </div>
       </header>
     </section>

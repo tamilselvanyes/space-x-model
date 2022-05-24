@@ -153,6 +153,13 @@
 	}
 }
 
+@media screen and (min-width: 750px) {
+	.rocket-section{
+		height: 100vh;
+	}
+
+}
+
 @media screen and (min-width: 1310px) {
 	.upcoming-section{
 		height: 100vh;

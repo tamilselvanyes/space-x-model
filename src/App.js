@@ -44,6 +44,13 @@ export default function App() {
           <OurMission />
           <ConnectOptions />
         </Route>
+
+        <Route exact path="/home">
+          <RecentLaunch />
+          <UpcomingLaunches />
+          <OurMission />
+          <ConnectOptions />
+        </Route>
       </Switch>
     </div>
   );
