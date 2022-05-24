@@ -1,6 +1,6 @@
-import "./App.css";
-import "./css/reset.css";
-import "./css/navigation.css";
+import "../App.css";
+import "../css/reset.css";
+import "../css/navigation.css";
 import { ConnectOptions } from "./ConnectOptions";
 import { RecentLaunch } from "./RecentLaunch";
 import { UpcomingLaunches } from "./UpcomingLaunches";

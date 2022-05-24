@@ -1,10 +1,13 @@
-import logo from "./bgimages/spacex-logo.png";
+import logo from "../bgimages/spacex-logo.png";
 import { useHistory } from "react-router-dom";
 import { HamburgerMenu } from "./Hamburger_Slider";
-import "./css/hamburger.css";
+import { TouchDetector } from "./TouchDetector";
+import "../css/hamburger.css";
+import { useState } from "react";
 
 export function NavigationBar() {
   const history = useHistory();
+  const [open, setOpen] = useState(false);
   return (
     <section>
       <header className="header">
@@ -53,7 +56,9 @@ export function NavigationBar() {
               </li>
             </ul>
           </nav>
-          <HamburgerMenu />
+          <TouchDetector open={open} setOpen={setOpen}>
+            <HamburgerMenu open={open} setOpen={setOpen} />
+          </TouchDetector>
         </div>
       </header>
     </section>

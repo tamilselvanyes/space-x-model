@@ -1,5 +1,5 @@
-import { API } from "./global";
-import "./css/upcoming.css";
+import { API } from "../global";
+import "../css/upcoming.css";
 import { useEffect, useState } from "react";
 
 export function UpcomingLaunches() {

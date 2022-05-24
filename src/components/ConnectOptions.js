@@ -1,4 +1,4 @@
-import "./css/connectus.css";
+import "../css/connectus.css";
 
 export function ConnectOptions() {
   return (

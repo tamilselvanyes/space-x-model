@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { API } from "./global";
-import "./css/launchdescription.css";
+import { API } from "../global";
+import "../css/launchdescription.css";
 import { useHistory, useParams } from "react-router-dom";
 
 export function LaunchDescription() {

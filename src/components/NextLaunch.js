@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { API } from "./global";
-import "./css/nextLaunch.css";
+import { API } from "../global";
+import "../css/nextLaunch.css";
 import { useHistory } from "react-router-dom";
 
 export function NextLaunch() {

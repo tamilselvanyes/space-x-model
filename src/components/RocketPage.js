@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import bg0 from "./bgimages/spacex-1.webp";
-import bg1 from "./bgimages/spacex-2.webp";
-import bg2 from "./bgimages/spacex-3.webp";
-import bg3 from "./bgimages/spacex-4.webp";
-import bg4 from "./bgimages/spacex-5.webp";
-import { API } from "./global";
-import "./css/rocket.css";
+import bg0 from "../bgimages/spacex-1.webp";
+import bg1 from "../bgimages/spacex-2.webp";
+import bg2 from "../bgimages/spacex-3.webp";
+import bg3 from "../bgimages/spacex-4.webp";
+import bg4 from "../bgimages/spacex-5.webp";
+import { API } from "../global";
+import "../css/rocket.css";
 import { useHistory } from "react-router-dom";
 
 export function RocketPage() {

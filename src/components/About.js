@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { API } from "./global";
+import { API } from "../global";
 import { useHistory } from "react-router-dom";
-import bg from "./bgimages/spacex-5.webp";
+import bg from "../bgimages/spacex-5.webp";
 
-import "./css/about.css";
+import "../css/about.css";
 
 export function About() {
   const [aboutDetails, setAboutDetails] = useState(null);

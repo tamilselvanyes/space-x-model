@@ -1,11 +1,11 @@
-import bg0 from "./bgimages/spacex-1.webp";
-import bg1 from "./bgimages/spacex-2.webp";
-import bg2 from "./bgimages/spacex-3.webp";
-import bg3 from "./bgimages/spacex-4.webp";
-import bg4 from "./bgimages/spacex-5.webp";
+import bg0 from "../bgimages/spacex-1.webp";
+import bg1 from "../bgimages/spacex-2.webp";
+import bg2 from "../bgimages/spacex-3.webp";
+import bg3 from "../bgimages/spacex-4.webp";
+import bg4 from "../bgimages/spacex-5.webp";
 import { useEffect, useState } from "react";
-import { API } from "./global";
-import "./css/recent_launch.css";
+import { API } from "../global";
+import "../css/recent_launch.css";
 import { useHistory } from "react-router-dom";
 
 export function RecentLaunch() {
