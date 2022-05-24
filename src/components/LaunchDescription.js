@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import { API } from "../global";
 import "../css/launchdescription.css";
-import { useHistory, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export function LaunchDescription() {
   const [rocketDetails, setRocketDetails] = useState(null);
-  const history = useHistory();
   const { flight_number } = useParams();
 
   function getRocketDetails() {
@@ -15,7 +14,6 @@ export function LaunchDescription() {
       .then((data) => data.json())
       .then((final_data) => {
         setRocketDetails(final_data);
-        console.log(final_data);
       });
   }
 

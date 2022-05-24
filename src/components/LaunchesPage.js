@@ -26,7 +26,7 @@ export function LaunchesPage() {
     return (
       <div
         className="launch-item-div"
-        onClick={() => history.push(`launches/${launchitem.flight_number}`)}
+        onClick={() => history.push(`/launches/${launchitem.flight_number}`)}
       >
         <div className="launch-info">
           <h1>{launchitem.mission_name}</h1>
@@ -40,7 +40,9 @@ export function LaunchesPage() {
           <br></br>
           <button
             className="content_button"
-            onClick={() => history.push(`launches/${launchitem.flight_number}`)}
+            onClick={() =>
+              history.push(`/launches/${launchitem.flight_number}`)
+            }
           >
             <span className="text">READ MORE</span>
             <div className="hover"></div>
@@ -68,7 +70,7 @@ export function LaunchesPage() {
       ) : (
         <div className="loading">
           <Box>
-            <CircularProgress size={60} color={"secondary"} />
+            <CircularProgress size={60} />
           </Box>
         </div>
       )}

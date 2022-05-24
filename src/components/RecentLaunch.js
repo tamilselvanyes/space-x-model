@@ -48,7 +48,9 @@ export function RecentLaunch() {
       ></div>
       {latestLaunch != null ? (
         <div className="launch_content">
-          <h1 className="launch_content_subheader">NEXT LAUNCH</h1>
+          <h1 className="launch_content_subheader" id="title-heading">
+            NEXT LAUNCH
+          </h1>
 
           <h1 className="launch_content_header">{latestLaunch.mission_name}</h1>
           <p>Launch Date: {date}</p>

@@ -42,8 +42,28 @@
 
 .rocket-title{
     margin-top: 30px;
-    margin-bottom:20px
+    margin-bottom:20px;
+    animation-duration: 3s;
+	animation-name: slidebottom;
 }
+
+.engine-title{
+    animation-duration: 3s;
+	animation-name: slidebottom;
+}
+
+
+  @keyframes slidebottom {
+	from {
+	  margin-bottom: 100%;
+	  height: 300%;
+	}
+  
+	to {
+        margin-bottom: 5%;
+        height: 100%;
+	}
+  }
 
 
 .rocket-background-div{

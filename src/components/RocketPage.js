@@ -2,11 +2,9 @@ import { useState, useEffect } from "react";
 import bg2 from "../bgimages/spacex-3.webp";
 import { API } from "../global";
 import "../css/rocket.css";
-import { useHistory } from "react-router-dom";
 
 export function RocketPage() {
   const [rocketDetails, setrocketDetails] = useState(null);
-  const history = useHistory();
 
   function getrocketDetails() {
     fetch(`${API}/rockets`, {
@@ -51,7 +49,7 @@ export function RocketPage() {
               </p>
             </div>
             <div className="engine-info">
-              <h2>Engine</h2>
+              <h2 className="engine-title">Engine</h2>
               <p className="details">
                 Number of Engine: {rocketitem.engines.number}
               </p>
