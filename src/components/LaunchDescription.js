@@ -15,6 +15,7 @@ export function LaunchDescription() {
       .then((data) => data.json())
       .then((final_data) => {
         setRocketDetails(final_data);
+        console.log(final_data);
       });
   }
 
@@ -22,15 +23,9 @@ export function LaunchDescription() {
     getRocketDetails();
   }, []);
 
-  function ShowImage({ image }) {
-    return (
-      <div
-        className="launch-background-div"
-        style={{
-          backgroundImage: `url(${image})`,
-        }}
-      ></div>
-    );
+  let event_date = "";
+  if (rocketDetails !== null) {
+    event_date = new Date(rocketDetails.launch_date_unix * 1000).toString();
   }
 
   return (
@@ -56,13 +51,10 @@ export function LaunchDescription() {
               {rocketDetails.launch_site.site_name_long}
             </p>
 
-            <div className="images-div">
-              {rocketDetails.links.flickr_images !== null
-                ? rocketDetails.links.flickr_images.map((image, index) => (
-                    <ShowImage key={index} image={image} />
-                  ))
-                : ""}
-            </div>
+            <p>
+              <b>Launch Date: </b>
+              {event_date}
+            </p>
           </div>
         </div>
       ) : (

@@ -25,7 +25,9 @@
 
 .history-item-div{
     width: 350px;
+    height: 400px;
     padding: 10px;
+    overflow-y:auto;
 }
 
 .history-links{
@@ -44,3 +46,5 @@
 .history-links .links:hover {
     color: skyblue
 }
+
+

@@ -12,14 +12,12 @@ export function NextLaunch() {
   }, []);
 
   function getLatestLaunch() {
-    console.log("Inside get");
     fetch(`${API}/launches/next`, {
       method: "GET",
     })
       .then((data) => data.json())
       .then((final_data) => {
         setLatestLaunch(final_data);
-        console.log(final_data);
       });
   }
   if (latestLaunch !== null && latestLaunch !== undefined) {
@@ -28,11 +26,20 @@ export function NextLaunch() {
 
   return (
     <section className="nextlaunch-section">
+      <h1 className="nextlaunch-page-title">Next Launch</h1>
+
       {latestLaunch !== null ? (
         <div className="nextlaunch-main-div">
-          <h1 className="main-title">{latestLaunch.mission_name}</h1>
+          <div
+            className="image-item-div"
+            style={{
+              backgroundImage: `url(${latestLaunch.links.mission_patch})`,
+            }}
+          ></div>
 
           <div className="rocket-details-main-div">
+            <h1 className="main-title">{latestLaunch.mission_name}</h1>
+
             <h3>Details:</h3>
             <p>{latestLaunch.details}</p>
             <p>

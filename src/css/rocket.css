@@ -2,9 +2,10 @@
     position: relative;
     align-items: center;
 
+
 }
 
-.recent_launch .bg{
+.rocket-section .recent_launch .bg{
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,7 +13,7 @@
     
 }
 
-.recent_launch .bg:after {
+.rocket-section .recent_launch .bg:after {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -31,7 +32,9 @@
     left: 1.5rem;
     top: 6rem;
     flex-direction: column;
-    width: 100%
+    width: 100%;
+    overflow-y: auto;
+
     
 }
 

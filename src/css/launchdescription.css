@@ -6,6 +6,7 @@
 .launch-description-main-div{
     margin-top: 8rem;
     margin-left: 2rem;
+    margin-bottom: 2rem;
     
 }
 
@@ -13,7 +14,6 @@
     margin-bottom: 2rem;
 }
 
-.rocket-details-main-div{
+.launch-description-section .rocket-details-main-div p{
     margin-top: 1rem;
-
 }
