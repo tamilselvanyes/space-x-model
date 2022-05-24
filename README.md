@@ -12,6 +12,12 @@ src/css/ contails Styling
 
 Pages will be responsive and more informative. Menu Bar (Hamburger) will be really cool.
 
+This app can be viewed in Desktop, Tabs and Mobile Phones. I have tried resposiveness to the maximum without third party Libraries.
+
 With more time I would have tried to implement more Animations.
+
+Netlify Link: https://amazing-fairy-c0beb2.netlify.app/
+
+
 
 
